@@ -1,0 +1,303 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>St Johns Hospital | Doctors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .float-card {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+
+</head>
+
+<body class="bg-gray-100">
+      <header>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <div>
+      <div class="antialiased bg-gray-100 dark-mode:bg-gray-900">
+        <div
+          class="w-full text-gray-700 bg-blue-300 dark-mode:text-gray-200 dark-mode:bg-gray-800"
+        >
+          <div
+            x-data="{ open: true }"
+            class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+          >
+            <div class="bgflex flex-row items-center justify-between p-4">
+              <a
+                href="index.html"
+                class=" bgtext-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                >St Johns Hospital</a
+              >
+              <button
+                class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+                @click="open = !open"
+              >
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                  <path
+                    x-show="!open"
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    x-show="open"
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <nav
+              :class="{'flex': open, 'hidden': !open}"
+              class="bg-blue-300 flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+            >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="about.html"
+                >About</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="services.html"
+                >Services</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="doctors.html"
+                >Doctors</a
+              >
+             <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="appointment.html"
+                >Appointment</a
+              >
+               <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="blog.html"
+                >Blog</a
+              >
+               <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </nav>
+            </header>
+
+<section class="py-20 px-10">
+
+  <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">
+    Our Doctors
+  </h2>
+
+  <!-- GRID CONTAINER -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-stretch">
+
+    <!-- CARD 1 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7"
+               alt="D0ctor"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr. Simon Hastings</h3>
+          <p class="text-blue-600 font-medium mb-2">Cardiologist</p>
+          <p class="text-gray-600 text-sm mb-4">10+ years experience in heart surgery and cardiac care.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-4">
+            Available
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
+               alt="Dr.Isabel Conklin"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr.Isabel Conklin</h3>
+          <p class="text-blue-600 font-medium mb-2">Pediatrician</p>
+          <p class="text-gray-600 text-sm mb-4">Specialist in child health, growth monitoring, and vaccinations.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-4">
+            Available
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f"
+               alt="Dr.Niklaus Mikaelson"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr.Rebecca Mikaelson</h3>
+          <p class="text-blue-600 font-medium mb-2">Psychiatrist</p>
+          <p class="text-gray-600 text-sm mb-4">Expert in mental health, anxiety, and mood disorders.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-4">
+            Available
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54"
+               alt="Dr.Damon Salvatore"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr.Damon Salvatore</h3>
+          <p class="text-blue-600 font-medium mb-2">Neurologist</p>
+          <p class="text-gray-600 text-sm mb-4">Specialist in brain disorders, migraines, and nerve conditions.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-yellow-100 text-yellow-700 text-sm px-3 py-1 rounded-full mb-4">
+            Busy
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-teal-400 via-green-400 to-blue-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+               alt="Dr.Conrad Fisher"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr.Conrad Fisher</h3>
+          <p class="text-blue-600 font-medium mb-2">Physician</p>
+          <p class="text-gray-600 text-sm mb-4">Experienced in general medicine and patient care.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-4">
+            Available
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="relative p-[2px] rounded-3xl bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 float-card">
+      <div class="bg-white/30 backdrop-blur-lg rounded-3xl p-8 text-center h-full flex flex-col justify-between">
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+               alt="Dr.Peter Kavinsky"
+               class="w-32 h-32 mx-auto rounded-full border-4 border-white object-cover mb-6">
+
+          <h3 class="text-xl font-bold text-gray-800">Dr.Nancy Wheeler</h3>
+          <p class="text-blue-600 font-medium mb-2">Optician</p>
+          <p class="text-gray-600 text-sm mb-4">Providing comprehensive eye care and vision correction services.</p>
+        </div>
+
+        <div>
+          <span class="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full mb-4">
+            Available
+          </span>
+          <br>
+          <button class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+            View Profile
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  <footer class="bg-blue-300 py-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 px-6">
+            <div>
+                <h4 class="text-white font-bold mb-4">St. Johns Hospital</h4>
+                <p>Providing quality healthcare services with compassion and excellence.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                     <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="services.html" class="hover:text-white">Services</a></li>
+                    <li><a href="doctors.html" class="hover:text-white">Doctors</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Contact</h4>
+                <p>Email: info@stjohns.co.ke</p>
+                <p>Phone: +254 712 345 678</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Location</h4>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-gray-600 text-sm">
+            © 2026 St. Johns Hospital. All Rights Reserved.
+        </div>
+    </footer>   
+</body>
+</html>
+    
