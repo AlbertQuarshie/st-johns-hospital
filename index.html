@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>St. Johns Hospital | Home</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+   <header
+      class="w-full text-gray-700 bg-blue-300 dark-mode:text-gray-200 dark-mode:bg-gray-800"
+    >
+      <div
+        x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+      >
+        <div class="flex flex-row items-center justify-between p-4">
+          <a
+            href="index.html"
+            class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+          >
+            St Johns Hospital
+          </a>
+          <button
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 110 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
+        >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="doctors.html"
+            >Doctors</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="appointment.html"
+            >Appointment</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="blog.html"
+            >Blog</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 hover:bg-gray-200 focus:outline-none"
+            href="contact.html"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
+<section class="relative bg-cover bg-center h-screen flex items-center"
+style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3');">
+
+  <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
+
+  <div class="relative max-w-6xl mx-auto text-white px-6">
+    <h2 class="text-4xl md:text-6xl font-bold mb-6">
+      Compassionate Care For Every Patient
+    </h2>
+    <p class="text-lg md:text-xl mb-8">
+      Delivering world-class healthcare services with professionalism,
+      integrity, and advanced medical technology.
+    </p>
+
+    <div class="flex flex-wrap gap-4">
+      <a href="#" class="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+        Book Appointment
+      </a>
+
+      <div class="bg-red-600 px-6 py-3 rounded-lg font-bold">
+        Emergency: +254 712 345 678
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h3 class="text-3xl font-bold text-blue-900 mb-12">Our Medical Services</h3>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="p-8 bg-gray-100 rounded-xl shadow hover:shadow-2xl hover:-translate-y-2 transition">
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png" class="w-16 mx-auto mb-4">
+<h4 class="font-bold text-lg mb-2">General Consultation</h4>
+<p>Professional diagnosis and treatment for various medical conditions.</p>
+</div>
+
+<div class="p-8 bg-gray-100 rounded-xl shadow hover:shadow-2xl hover:-translate-y-2 transition">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png" class="w-16 mx-auto mb-4">
+<h4 class="font-bold text-lg mb-2">Maternity Care</h4>
+<p>Safe pregnancy, delivery, and postnatal healthcare services.</p>
+</div>
+
+<div class="p-8 bg-gray-100 rounded-xl shadow hover:shadow-2xl hover:-translate-y-2 transition">
+<img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" class="w-16 mx-auto mb-4">
+<h4 class="font-bold text-lg mb-2">Emergency Services</h4>
+<p>24/7 emergency response with qualified professionals.</p>
+</div>
+
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-100">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h3 class="text-3xl font-bold text-blue-900 mb-12">Meet Our Doctors</h3>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-lg mb-4 mx-auto">
+<h4 class="font-bold">Dr. James Hunter</h4>
+<p class="text-gray-600 mb-4">Cardiologist</p>
+<a href="#" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700">Book Appointment</a>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-lg mb-4 mx mx-auto">
+<h4 class="font-bold">Dr. Sarah Wheeler</h4>
+<p class="text-gray-600 mb-4">Gynecologist</p>
+<a href="#" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700">Book Appointment</a>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<img src="https://randomuser.me/api/portraits/men/65.jpg" class="rounded-lg mb-4 mx-auto">
+<h4 class="font-bold">Dr. Peter Lee</h4>
+<p class="text-gray-600 mb-4">Pediatrician</p>
+<a href="#" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700">Book Appointment</a>
+</div>
+
+</div>
+</div>
+</section>
+<section class="bg-blue-900 text-white py-16 text-center">
+<div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+<div><h4 class="text-4xl font-bold">20+</h4><p>Doctors</p></div>
+<div><h4 class="text-4xl font-bold">15,000+</h4><p>Patients Served</p></div>
+<div><h4 class="text-4xl font-bold">24/7</h4><p>Emergency Care</p></div>
+<div><h4 class="text-4xl font-bold">98%</h4><p>Patient Satisfaction</p></div>
+</div>
+</section>
+<section class="bg-red-600 text-white py-12 text-center">
+<h3 class="text-3xl font-bold mb-4">Need Immediate Medical Attention?</h3>
+<a href="#" class="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-200">
+Book Your Appointment Now
+</a>
+</section>
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+<div>
+<h3 class="text-3xl font-bold text-blue-900 mb-4">Why Choose Us?</h3>
+<p class="text-gray-700 mb-4">
+We combine advanced medical technology with compassionate care to ensure
+the best outcomes for our patients.
+</p>
+<p class="text-gray-700">
+Our team is committed to maintaining high standards of healthcare delivery.
+</p>
+</div>
+<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b" class="rounded-xl shadow-lg">
+</div>
+</section>
+<section class="py-20 bg-gray-100">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h3 class="text-3xl font-bold text-blue-900 mb-12">What Our Patients Say</h3>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p>"Excellent service and caring doctors."</p>
+<h4 class="font-bold mt-4">- Mary W.</h4>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p>"Clean facilities and professional staff."</p>
+<h4 class="font-bold mt-4">- John K.</h4>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<p>"Highly recommend St. Johns Hospital."</p>
+<h4 class="font-bold mt-4">- Faith N.</h4>
+</div>
+
+</div>
+</div>
+</section>
+<footer class="bg-blue-300">
+<div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 px-6">
+
+<div>
+<h4 class="text-white font-bold mb-4">St. Johns Hospital</h4>
+<p>Providing quality healthcare services with compassion and excellence.</p>
+</div>
+
+<div>
+<h4 class="text-white font-bold mb-4">Quick Links</h4>
+<ul>
+ <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="services.html" class="hover:text-white">Services</a></li>
+                    <li><a href="doctors.html" class="hover:text-white">Doctors</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+</div>
+
+<div>
+<h4 class="text-white font-bold mb-4">Contact</h4>
+<p>Email: info@stjohns.co.ke</p>
+<p>Phone: +254 712 345 678</p>
+</div>
+
+<div>
+<h4 class="text-white font-bold mb-4">Location</h4>
+<p>Nairobi, Kenya</p>
+</div>
+
+</div>
+
+<div class="text-center mt-10 text-gray-500">
+© 2026 St. Johns Hospital. All Rights Reserved.
+</div>
+</footer>
+
+
+
+</body>
+</html>
